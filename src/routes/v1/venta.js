@@ -10,4 +10,6 @@ router
 
     .get('/venta/empleados', VentaController.getSalesAmountByEmployee)
 
+    .post('/venta/range', VentaController.getSalesBetweenDates)
+
 export default router;

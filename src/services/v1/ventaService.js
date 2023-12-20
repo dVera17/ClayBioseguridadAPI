@@ -17,4 +17,9 @@ export class VentaService {
         return result;
     }
 
+    static async getSalesBetweenDates({ startDate, endDate }) {
+        let result = await VentaRepository.getSalesBetweenDates(startDate, endDate);
+        return result;
+    }
+
 }

@@ -28,7 +28,16 @@ export class VentaRepository {
             let result = await executeQuery(sql);
             return result.data;
         } catch (error) {
-            console.log(error);
+            throw error;
+        }
+    }
+
+    static async getSalesBetweenDates(startDate, endDate) {
+        const sql = `SELECT v.id as "Codigo", DATE_FORMAT(Fecha, '%d-%m-%Y') as "Fecha de venta" FROM venta v WHERE v.Fecha BETWEEN '${startDate}' AND '${endDate}';`;
+        try {
+            let result = await executeQuery(sql);
+            return result.data;
+        } catch (error) {
             throw error;
         }
     }
