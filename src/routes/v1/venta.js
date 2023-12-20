@@ -8,4 +8,6 @@ router
 
     .get('/ventas', VentaController.getAllSales)
 
+    .get('/venta/empleados', VentaController.getSalesAmountByEmployee)
+
 export default router;

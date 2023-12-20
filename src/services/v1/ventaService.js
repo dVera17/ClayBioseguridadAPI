@@ -12,4 +12,9 @@ export class VentaService {
         return result;
     }
 
+    static async getSalesAmountByEmployee() {
+        let result = await VentaRepository.getSalesAmountByEmployee();
+        return result;
+    }
+
 }

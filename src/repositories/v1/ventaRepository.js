@@ -22,4 +22,15 @@ export class VentaRepository {
         }
     }
 
+    static async getSalesAmountByEmployee() {
+        const sql = `SELECT e.id as "Identificacion empleado", e.nombre as "Nombre", COUNT(v.id) as "Total de ventas" FROM empleado e JOIN venta v ON e.id = v.IdEmpleadoFk GROUP BY e.id, e.nombre;`;
+        try {
+            let result = await executeQuery(sql);
+            return result.data;
+        } catch (error) {
+            console.log(error);
+            throw error;
+        }
+    }
+
 }
