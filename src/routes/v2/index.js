@@ -3,6 +3,6 @@ import routerVentaV2 from "./venta.js";
 const router = Router();
 
 router
-    .use(routerVentaV2);
+    .use('/venta', routerVentaV2);
 
 export default router;

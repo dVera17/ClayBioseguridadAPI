@@ -3,8 +3,8 @@ import { VentaController } from "../../controllers/v2/ventaController.js";
 const router = Router();
 
 router
-    .get('/ventas', VentaController.getAllSales)
+    .get('/total', VentaController.getAllSales)
 
-    .post('/venta/range', VentaController.getSalesBetweenDates)
+    .post('/range', VentaController.getSalesBetweenDates)
 
 export default router;

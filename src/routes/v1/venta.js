@@ -4,12 +4,14 @@ import { VentaController } from "../../controllers/v1/ventaController.js";
 const router = Router();
 
 router
-    .get('/venta/mes/:month', VentaController.getSalesByMonth)
+    .get('/mes/:month', VentaController.getSalesByMonth)
 
-    .get('/ventas', VentaController.getAllSales)
+    .get('/total', VentaController.getAllSales)
 
-    .get('/venta/empleados', VentaController.getSalesAmountByEmployee)
+    .get('/empleados', VentaController.getSalesAmountByEmployee)
 
-    .post('/venta/range', VentaController.getSalesBetweenDates)
+    .post('/range', VentaController.getSalesBetweenDates)
+
+    .get('/forma_pago', VentaController.getSalesAmountByPaymentType)
 
 export default router;
