@@ -42,4 +42,14 @@ export class VentaRepository {
         }
     }
 
+    static async getSalesAmountByPaymentType() {
+        const sql = `SELECT f.descripcion as "Forma de pago", COUNT(*) as "Total de ventas" FROM forma_pago f JOIN venta v ON f.id = v.IdFormaPagoFk GROUP BY f.descripcion;`;
+        try {
+            let result = await executeQuery(sql);
+            return result.data;
+        } catch (error) {
+            throw error
+        }
+    }
+
 }

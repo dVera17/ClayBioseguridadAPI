@@ -22,4 +22,9 @@ export class VentaService {
         return result;
     }
 
+    static async getSalesAmountByPaymentType() {
+        let result = await VentaRepository.getSalesAmountByPaymentType();
+        return result;
+    }
+
 }
