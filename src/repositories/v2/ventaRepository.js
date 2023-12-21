@@ -13,4 +13,14 @@ export class VentaRepository {
         }
     }
 
+    static async getSalesBetweenDates(startDate, endDate) {
+        const sql = `SELECT v.id as "Codigo de venta", DATE_FORMAT(Fecha, '%d-%m-%Y') as "Fecha de venta", c.id as "Identificacion cliente", c.nombre as "Nombre", f.descripcion as "Forma de pago" FROM forma_pago f JOIN venta v ON f.id = v.IdFormaPagoFk JOIN cliente c ON c.id = v.IdClienteFk WHERE v.Fecha BETWEEN '${startDate}' AND '${endDate}';`
+        try {
+            let result = await executeQuery(sql);
+            return result.data;
+        } catch (error) {
+            throw error;
+        }
+    }
+
 }

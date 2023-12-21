@@ -5,4 +5,6 @@ const router = Router();
 router
     .get('/ventas', VentaController.getAllSales)
 
+    .post('/venta/range', VentaController.getSalesBetweenDates)
+
 export default router;
