@@ -49,3 +49,9 @@ Esta empresa se dedica a fabricar y comercializar productos de bioseguridad y se
 7. Obtener el nombre y la descripción de los tipos de pagos junto con la cantidad de ventas asociadas a cada tipo
     - Método: `GET`
     - URL: `http://127.0.0.1:5010/api/v1/venta/forma_pago`
+
+### Empleado
+
+1. Obtener la informacion de todos los empleados, incluyendo el cargo y el municipio
+    - Método: `GET`
+    - URL: `http://127.0.0.1:5010/api/v1/empleado`
