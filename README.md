@@ -55,3 +55,8 @@ Esta empresa se dedica a fabricar y comercializar productos de bioseguridad y se
 1. Obtener la informacion de todos los empleados, incluyendo el cargo y el municipio
     - Método: `GET`
     - URL: `http://127.0.0.1:5010/api/v1/empleado`
+
+2. Obtener la lista de empleados mostrando la duración de su empleo en años
+    - Método: `GET`
+    - Url: `http://127.0.0.1:5010/api/v1/empleado/antiguedad`
+
