@@ -9,4 +9,10 @@ export class EmpleadoController {
         res.status(200).json({ status: "200", data: result });
     }
 
+    static async getDurationEmploymentInYears(req, res) {
+        let result = await EmpleadoService.getDurationEmploymentInYears();
+        if (result.length === 0) return res.status(400).json({ status: "400", message: "No se encontró información" });
+        res.status(200).json({ status: "200", data: result });
+    }
+
 }

@@ -5,4 +5,6 @@ const router = Router();
 router
     .get('/', EmpleadoController.getCompleteInfoEmployees)
 
+    .get('/antiguedad', EmpleadoController.getDurationEmploymentInYears)
+
 export default router;
